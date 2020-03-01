@@ -360,8 +360,9 @@ h3{
 <div id="contact", class="page">
     <div class="content">
         <h3>Find a Disaster Relief Center</h3>
-    </div>
+        <a href= "https://www.google.com/maps/d/u/0/embed?mid=15hT0AX0spcrFHh63GHvI7R6HDLS0mOOa">Click on this link to find disaster relief centers throughout the U.S.</a>
 
+</div>
 </div>
 
 <div id="home", class="page default">
@@ -426,8 +427,8 @@ h3{
   <p><a href=https://www.cdc.gov/nchs/w2w/index.htm>Find the vital records office</a>in the state where you were born. Check to see if you can get a certified copy of your birth certificate with no identification. If you can, follow the ordering instructions. Some states accept alternate ways to verify your ID. You may have to contact your state to find out what it requires. For example, a state may accept your sworn statement of identity or a notarized letter from your mother and father whose name is on your birth certificate, along with a copy of their photo id. </p>
   </div>
   <div class="w3-panel w3-card-4" style="background-color: #b3c6ff;">
-  <h3>3. Replace Your Driver’s License</h3>
-  <p>Get this first if you can’t get your birth certificate. <a href=https://www.usa.gov/motor-vehicle-services>Check with your state</a> for its procedures. In some states, you can order a replacement online without providing any ID.</p>
+  <h3>3. Replace Your Drivers License</h3>
+  <p>Get this first if you cannot get your birth certificate. <a href=https://www.usa.gov/motor-vehicle-services>Check with your state</a> for its procedures. In some states, you can order a replacement online without providing any ID.</p>
 </div>
 <div class="w3-panel w3-card-4" style="background-color: #99b3ff;">
   <h3>4. Replace Your Green Card</h3>
@@ -435,15 +436,15 @@ h3{
 </div>
 <div class="w3-panel w3-card-4" style="background-color: #809fff;">
   <h3>5. Replace Your Naturalization or Citizenship Documents</h3>
-  <p>If you are a naturalized U.S. citizen, follow the steps to apply to <a href=https://www.uscis.gov/n-565>replace your naturalization or citizenship papers.</a> If you don’t have a copy of your original documents to submit with your application, <a href=https://www.uscis.gov/about-us/contact-us>contact the U.S. Citizenship and Immigration Services.</a></p>
+  <p>If you are a naturalized U.S. citizen, follow the steps to apply to <a href=https://www.uscis.gov/n-565>replace your naturalization or citizenship papers.</a> If you do not have a copy of your original documents to submit with your application, <a href=https://www.uscis.gov/about-us/contact-us>contact the U.S. Citizenship and Immigration Services.</a></p>
 </div>
 <div class="w3-panel w3-card-4" style="background-color: #668cff; color: white;">
   <h3>6. Replace Your Marriage Certificate</h3>
-  <p>You’ll need a certified copy as proof if you changed your name when you got married. <a href=https://www.usa.gov/replace-vital-documents#item-212689>Contact the vital records office in the state where you were married.</a></p>
+  <p>You will need a certified copy as proof if you changed your name when you got married. <a href=https://www.usa.gov/replace-vital-documents#item-212689>Contact the vital records office in the state where you were married.</a></p>
 </div>
 <div class="w3-panel w3-card-4" style="background-color: #4d79ff; color: white;">
   <h3>7. Replace Your Social Security Card</h3>
-  <p>First, <a href=https://blog.ssa.gov/so-youve-lost-your-social-security-card>find out if you need a replacement card</a>  Most of the time, you’ll just need to know your number and not show your card. If you do need a card, follow the steps to <a href=https://www.ssa.gov/ssnumber>replace your Social Security card.</a></p>
+  <p>First, <a href=https://blog.ssa.gov/so-youve-lost-your-social-security-card>find out if you need a replacement card</a>  Most of the time, you will just need to know your number and not show your card. If you do need a card, follow the steps to <a href=https://www.ssa.gov/ssnumber>replace your Social Security card.</a></p>
 </div>
 <div class="w3-panel w3-card-4" style="background-color: #3366ff; color: white;">
   <h3>8. Report Your Lost or Destroyed U.S. Passport and Apply for a Replacement</h3>
@@ -460,6 +461,7 @@ h3{
 
 <script>
 
+window.onload = function() {myMap()};
 window.onscroll = function() {myFunction()};
 
 var navbar = document.getElementById("navbar");
@@ -500,7 +502,7 @@ function showSlides(n) {
       dots[i].className = dots[i].className.replace(" active", "");
       switch (slideIndex) {
   case 1:
-    textblurb.innerHTML = "Hurricanes, also known as tropical cyclones or typhoons, are large rotating storms with winds of at least 74 miles per hour, and a center of low air pressure called the eye of the hurricane. The number of hurricanes has also been steadily increasing due to climate change. Hurricanes have been ranked one of the most dangerous natural disasters, and though they don’t have a high death rate, many coastal towns and cities have been submerged in water and have been destroyed by the high-speed winds due to these disastrous events.";
+    textblurb.innerHTML = "Hurricanes, also known as tropical cyclones or typhoons, are large rotating storms with winds of at least 74 miles per hour, and a center of low air pressure called the eye of the hurricane. The number of hurricanes has also been steadily increasing due to climate change. Hurricanes have been ranked one of the most dangerous natural disasters, and though they do not have a high death rate, many coastal towns and cities have been submerged in water and have been destroyed by the high-speed winds due to these disastrous events.";
     break;
   case 2:
     textblurb.innerHTML = "A tornado is a violently rotating column of air extending from a thunderstorm to the ground. The most violent tornadoes are capable of tremendous destruction and could reach speeds of up to 300 mph. They have the potential to hurl vehicles hundreds of yards, destroy large buildings and houses, and uproot trees. Tornadoes have resulted in losses of over $14 billion on average for the United States, and have caused some of the worst destruction of all natural disasters.";
@@ -515,7 +517,7 @@ function showSlides(n) {
     textblurb.innerHTML = "Most people think of a drought as a period of unusually dry weather that causes problems such as precipitation shortage, water supply shortages, and crop damage. Surprisingly, a drought can also be caused by overpopulation and overuse of resources as well. Either way, a drought is a deadly natural disaster, and its occurrence is steadily increasing due to climate change. Though droughts only account for about 5% of disaster events total, they affected more than 1 billion people total between 1994 to 2013. ";
     break; 
   case 6:
-    textblurb.innerHTML = "A wildfire has a self-explanatory name; it is simply an uncontrolled or “wild” fire that wipes out large fields, forests, or other areas of land. A wildfire can be called a forest fire, a grass fire, a peat fire, or a bush fire, depending on the type of vegetation being burnt. Often, wildfires are good for spreading seeds, allowing for new vegetation to grow. However, climate change, instigated by humans, has increased not only the number of wildfires, but how deadly they are as well. Recently, the Australian Bushfires killed an estimated 30% of all australian wildlife, and at least 33 people.";
+    textblurb.innerHTML = "A wildfire has a self-explanatory name; it is simply an uncontrolled or wild fire that wipes out large fields, forests, or other areas of land. A wildfire can be called a forest fire, a grass fire, a peat fire, or a bush fire, depending on the type of vegetation being burnt. Often, wildfires are good for spreading seeds, allowing for new vegetation to grow. However, climate change, instigated by humans, has increased not only the number of wildfires, but how deadly they are as well. Recently, the Australian Bushfires killed an estimated 30% of all australian wildlife, and at least 33 people.";
     break;
   case 7:
     textblurb.innerHTML = "An avalanche is a natural disaster in which snow rapidly falls down a mountain. Before the actual event of the avalanche, a snowpack, a combination of snow and ice, is formed. Then, the actual avalanche occurs when the snowpack cracks, starts to melt, or becomes unstable in any way. Avalanches cause as many as 40 deaths in North America each year. However, the sad part is that humans trigger 90% of these disasters, which are mainly due to climate change and the rise of the melting of snowpacks.";
@@ -528,7 +530,6 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-
 
 </script>
 
