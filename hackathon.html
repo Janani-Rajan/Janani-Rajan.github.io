@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title>Disaster Relief</title>
+<style>
+
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+  margin: 20px;
+}
+.header {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #000066;
+  padding-top: none;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#navbar a:hover {
+  background-color: #99bbff;
+  color: #000066;
+}
+
+.content {   
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+ /* This hides all pages */
+ .page {
+    display: none;
+}
+/* This displays the first page */
+.default {
+    display: block;
+}
+/* This displays the page corresponding to the one you clicked on */
+    :target {
+    display: block;
+}
+/* This hides the default page when another page is clicked */
+    :target~.default {
+    display: none;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+img{
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  z-index: -8;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 500;
+}
+
+/*SLIDESHOW CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #e6ecff;
+}
+
+/*FOR THE 3 COLUMN THING*/
+/* Create three equal columns that floats next to each other */
+.columnio {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.rowio:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h3{
+  padding-left: 20px;
+}
+
+</style>
+</head>
+<body>
+  <div class="header">
+    <img src="C:\Users\soumyasarang\Downloads\Monochromatic_NatureBlue1.jpg" alt="image" width="1485" height="400">
+    <div class="centered"><h1 class="w3-container w3-center w3-animate-top">DISASTER RELIEF</h1></div>
+  </div>
+
+  
+  
+  <div id="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">Disasters</a>
+  <a href="#contact">Find a Disaster Relief Center</a>
+  </div>
+
+<div id="news", class="page">
+    <div class="content">
+        <h3>Disasters</h3>
+<!--SLIDESHOW CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+        <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 8</div>
+    <img src="C:\Users\soumyasarang\Downloads\Hurricane_Florence.jpg" class="w3-grayscale" width=1000 height=600>
+    <div class="text">Hurricane</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 8</div>
+    <img src="C:\Users\soumyasarang\Downloads\tornado-leading-image.jpg" class="w3-grayscale" width=1000 height=600>
+    <div class="text">Tornado</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 8</div>
+    <img src="C:\Users\soumyasarang\Downloads\earthquake.jpg" class="w3-grayscale" width=1000 height=600>
+    <div class="text">Earthquake</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 8</div>
+    <img src="C:\Users\soumyasarang\Downloads\Tsunami1.jpg" class="w3-grayscale" width=1000 height=600>
+    <div class="text">Tsunami</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 8</div>
+    <img src="C:\Users\soumyasarang\Downloads\drought.jpg" class="w3-grayscale" width=1000 height=600>
+    <div class="text">Drought</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 8</div>
+    <img src="C:\Users\soumyasarang\Downloads\Wildfire-Stanislaus.jpg" class="w3-grayscale" width=1000 height=600>
+    <div class="text">Wildfire</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 8</div>
+    <img src="C:\Users\soumyasarang\Downloads\avalanche.jpeg" class="w3-grayscale" width=1000 height=600>
+    <div class="text">Avalanche</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">8 / 8</div>
+    <img src="C:\Users\soumyasarang\Downloads\volcano.jpg" class="w3-grayscale" width=1000 height=600>
+    <div class="text">Volcanic Eruption</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+</div>
+</div>
+<p id="textblurb">Heyyyyy</p>
+</div>
+
+<div id="contact", class="page">
+    <div class="content">
+        <h3>Find a Disaster Relief Center</h3>
+    </div>
+
+</div>
+
+<div id="home", class="page default">
+<div class="target">
+<div class="content">
+  <h3>What are Natural Disasters?</h3>
+  <p>A natural disaster is an event such as a flood, earthquake, or hurricane that causes great damage or loss of life. Examples of natural disasters can include...</p>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <h3>Hurricanes</h3>
+        <img src="C:\Users\soumyasarang\Downloads\Hurricane_Florence.jpg" width="300" height = "300" class="w3-grayscale-max">
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <h3>Tornadoes</h3>
+        <img src="C:\Users\soumyasarang\Downloads\tornado-leading-image.jpg" width="300" height = "300" class="w3-grayscale-max">
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <h3>Earthquakes</h3>
+        <img src="C:\Users\soumyasarang\Downloads\earthquake.jpg" width="300" height = "300" class="w3-grayscale-max">
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <h3>Wildfires</h3>
+        <img src="C:\Users\soumyasarang\Downloads\Wildfire-Stanislaus.jpg" width="300" height = "300" class="w3-grayscale-max">
+      </div>
+    </div>
+  </div>
+  </div>
+  <p>Natural Disasters have the potential to pose a significant threat to human health and safety, property, critical infrastructure, and homeland security according the United States Department of Homeland and Security.</p>
+  <p>The three mission areas of Natural Hazards are Prevention, Protection, and Mitigation.</p>
+  <div class="rowio">
+    <div class="columnio" style="background-color:#003399;">
+      <h2>Prevention</h2>
+      <p>This mission area focuses on the ability to avoid, prevent, or stop an imminent threat.
+      </p>
+    </div>
+    <div class="columnio" style="background-color:#3377ff;">
+      <h2>Protection</h2>
+      <p>This mission area focuses on the ability to secure and protect a community against a variety of threats and hazards.</p>
+    </div>
+    <div class="columnio" style="background-color:#b3ccff;">
+      <h2>Mitigation</h2>
+      <p>This mission area focuses on the ability to reduce the loss of life and property by lessening the impact of a disaster.</p>
+    </div>
+  </div>
+  <p>What to do if all possessions including home were destroyed during a natural disaster?</p>
+  <div class="w3-panel w3-card-4" style="background-color: #e6ecff;">
+  <h3>1. Make Other Arrangements for Mail Delivery If Your Home Was Destroyed</h3>
+  <p>Government agencies usually mail replacement vital documents to your home. If you lost your home, <a href=https://tools.usps.com/find-location.htm?>contact your local post office.</a>Ask if you can pick up your mail there or request to have your mail forwarded to a temporary location.</p>
+  </div>
+  <div class="w3-panel w3-card-4" style="background-color: #ccd9ff;">
+  <h3>2. Replace Your U.S. Birth Certificate</h3>
+  <p><a href=https://www.cdc.gov/nchs/w2w/index.htm>Find the vital records office</a>in the state where you were born. Check to see if you can get a certified copy of your birth certificate with no identification. If you can, follow the ordering instructions. Some states accept alternate ways to verify your ID. You may have to contact your state to find out what it requires. For example, a state may accept your sworn statement of identity or a notarized letter from your mother and father whose name is on your birth certificate, along with a copy of their photo id. </p>
+  </div>
+  <div class="w3-panel w3-card-4" style="background-color: #b3c6ff;">
+  <h3>3. Replace Your Driver’s License</h3>
+  <p>Get this first if you can’t get your birth certificate. <a href=https://www.usa.gov/motor-vehicle-services>Check with your state</a> for its procedures. In some states, you can order a replacement online without providing any ID.</p>
+</div>
+<div class="w3-panel w3-card-4" style="background-color: #99b3ff;">
+  <h3>4. Replace Your Green Card</h3>
+  <p>If you are a lawful permanent resident of the U.S., <a href=https://www.uscis.gov/i-90>apply for a replacement permanent resident card.</a></p>
+</div>
+<div class="w3-panel w3-card-4" style="background-color: #809fff;">
+  <h3>5. Replace Your Naturalization or Citizenship Documents</h3>
+  <p>If you are a naturalized U.S. citizen, follow the steps to apply to <a href=https://www.uscis.gov/n-565>replace your naturalization or citizenship papers.</a> If you don’t have a copy of your original documents to submit with your application, <a href=https://www.uscis.gov/about-us/contact-us>contact the U.S. Citizenship and Immigration Services.</a></p>
+</div>
+<div class="w3-panel w3-card-4" style="background-color: #668cff; color: white;">
+  <h3>6. Replace Your Marriage Certificate</h3>
+  <p>You’ll need a certified copy as proof if you changed your name when you got married. <a href=https://www.usa.gov/replace-vital-documents#item-212689>Contact the vital records office in the state where you were married.</a></p>
+</div>
+<div class="w3-panel w3-card-4" style="background-color: #4d79ff; color: white;">
+  <h3>7. Replace Your Social Security Card</h3>
+  <p>First, <a href=https://blog.ssa.gov/so-youve-lost-your-social-security-card>find out if you need a replacement card</a>  Most of the time, you’ll just need to know your number and not show your card. If you do need a card, follow the steps to <a href=https://www.ssa.gov/ssnumber>replace your Social Security card.</a></p>
+</div>
+<div class="w3-panel w3-card-4" style="background-color: #3366ff; color: white;">
+  <h3>8. Report Your Lost or Destroyed U.S. Passport and Apply for a Replacement</h3>
+  <p><a href=https://www.usa.gov/passport-problems#item-211451>Report a lost or destroyed passport </a>to the State Department immediately. <a href=https://travel.state.gov/content/travel/en/passports/how-apply/forms.html>Fill out a form DS-11</a> to apply for a new passport.</p>
+</div>
+<div class="w3-panel w3-card-4" style="background-color: 	 #1a53ff; color: white;">
+  <h3>9. Replace Other Important Documents</h3>
+  <p>Replace your voter registration card through your <a href=https://www.usa.gov/election-office> state or local election office.</a> Learn how to <a href=https://www.usa.gov/replace-vital-documents#item-37457>replace other documents</a> including Medicare and Medicaid cards and military and federal employee IDs.</p>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+var textblurb = document.getElementById("textblurb");
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+};
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+      switch (slideIndex) {
+  case 1:
+    textblurb.innerHTML = "Hurricanes, also known as tropical cyclones or typhoons, are large rotating storms with winds of at least 74 miles per hour, and a center of low air pressure called the eye of the hurricane. The number of hurricanes has also been steadily increasing due to climate change. Hurricanes have been ranked one of the most dangerous natural disasters, and though they don’t have a high death rate, many coastal towns and cities have been submerged in water and have been destroyed by the high-speed winds due to these disastrous events.";
+    break;
+  case 2:
+    textblurb.innerHTML = "A tornado is a violently rotating column of air extending from a thunderstorm to the ground. The most violent tornadoes are capable of tremendous destruction and could reach speeds of up to 300 mph. They have the potential to hurl vehicles hundreds of yards, destroy large buildings and houses, and uproot trees. Tornadoes have resulted in losses of over $14 billion on average for the United States, and have caused some of the worst destruction of all natural disasters.";
+    break;
+  case 3:
+    textblurb.innerHTML = "An earthquake is a sudden and violent shaking of the ground, sometimes causing great destruction, as a result of the shifting of the tectonic plates that make up the earth’s crust, or even volcanic action. Earthquakes have some of the highest death tolls, ranging in the hundreds of thousands per earthquake. For example, official estimates put the death toll at 316,000 people for the earthquake in Haiti which struck on January 12th, 2010. Earthquakes also cause major destruction for towns and cities as well, making it important to provide disaster relief for earthquake survivors as well.";
+    break;
+  case 4:
+    textblurb.innerHTML = "A tsunami is a series of unusually large waves in a water body that can be caused by a displacement of large volumes of water. Though tsunamis usually occur in oceans, they can even be caused by displacement of water in large lakes. Earthquakes, volcanic eruptions, and other underwater explosions can cause tsunamis. Tsunamis have proven to be twenty times more deadly than ground movements caused by earthquakes, as they have caused around 79 deaths per 1,000 people, while ground movements have caused 4 deaths per 1,000 people.";
+    break;
+  case 5:
+    textblurb.innerHTML = "Most people think of a drought as a period of unusually dry weather that causes problems such as precipitation shortage, water supply shortages, and crop damage. Surprisingly, a drought can also be caused by overpopulation and overuse of resources as well. Either way, a drought is a deadly natural disaster, and its occurrence is steadily increasing due to climate change. Though droughts only account for about 5% of disaster events total, they affected more than 1 billion people total between 1994 to 2013. ";
+    break; 
+  case 6:
+    textblurb.innerHTML = "A wildfire has a self-explanatory name; it is simply an uncontrolled or “wild” fire that wipes out large fields, forests, or other areas of land. A wildfire can be called a forest fire, a grass fire, a peat fire, or a bush fire, depending on the type of vegetation being burnt. Often, wildfires are good for spreading seeds, allowing for new vegetation to grow. However, climate change, instigated by humans, has increased not only the number of wildfires, but how deadly they are as well. Recently, the Australian Bushfires killed an estimated 30% of all australian wildlife, and at least 33 people.";
+    break;
+  case 7:
+    textblurb.innerHTML = "An avalanche is a natural disaster in which snow rapidly falls down a mountain. Before the actual event of the avalanche, a snowpack, a combination of snow and ice, is formed. Then, the actual avalanche occurs when the snowpack cracks, starts to melt, or becomes unstable in any way. Avalanches cause as many as 40 deaths in North America each year. However, the sad part is that humans trigger 90% of these disasters, which are mainly due to climate change and the rise of the melting of snowpacks.";
+    break;
+  case 8:
+    textblurb.innerHTML = "Volcanic eruptions have a wide range of outcomes, from minimal amounts of gases escaping from a volcano, to massive explosions that have the potential to destroy nearby towns, cities, and wildlife, whose after-effects can be felt hundreds of miles away from the volcano. Though volcanic eruptions are not as common as other natural disasters, it is still important to offer disaster relief to these people, and provide them with food, water, shelter, and any other facility necessary to help them live.";
+    break;
+}
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+</script>
+
+</body>
+</html>
