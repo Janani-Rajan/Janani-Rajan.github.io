@@ -25,6 +25,9 @@ p{
   overflow: hidden;
   background-color: #000066;
   padding-top: none;
+  position: sticky;
+  transform: rotate(360 deg);
+  z-index: 10;
 }
 
 #navbar a {
@@ -35,7 +38,7 @@ p{
   padding: 14px 16px;
   text-decoration: none;
   font-size: 25px;
-  z-index: 1;
+  
 }
 
 #navbar a:hover {
@@ -85,7 +88,7 @@ img{
   margin-right: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
-  z-index: -8;
+  z-index: -1;
 }
 
 /* Centered text */
@@ -105,6 +108,7 @@ img{
   max-width: 1000px;
   position: relative;
   margin: auto;
+  z-index: -1;
 }
 
 /* Hide the images by default */
@@ -112,7 +116,7 @@ img{
   display: none;
 }
 
-/* Next & previous buttons */
+/*Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -126,18 +130,18 @@ img{
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-}
+} 
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-}
+} 
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
-}
+} 
 
 /* Caption text */
 .text {
@@ -225,6 +229,7 @@ img{
   padding: 16px;
   text-align: center;
   background-color: #e6ecff;
+  z-index: -1;
 }
 
 /*FOR THE 3 COLUMN THING*/
@@ -233,7 +238,7 @@ img{
   float: left;
   width: 33.33%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 300px;
 }
 
 /* Clear floats after the columns */
@@ -261,11 +266,11 @@ h3{
   
   <div id="navbar">
   <a href="#home">Home</a>
-  <a href="#news">Disasters</a>
-  <a href="#contact">Find a Disaster Relief Center</a>
+  <a href="#disasters">Disasters</a>
+  <a href="#disasterrelief">Find a Disaster Relief Center</a>
   </div>
 
-<div id="news", class="page">
+<div id="disasters", class="page">
     <div class="content">
         <h3>Disasters</h3>
 <!--SLIDESHOW CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
@@ -336,9 +341,9 @@ h3{
 
   <!--C:\Users\soumyasarang\Downloads\volcano.jpg-->
 
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!--<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
 </div>
 <br>
 
@@ -357,7 +362,7 @@ h3{
 <p id="textblurb">Heyyyyy</p>
 </div>
 
-<div id="contact", class="page">
+<div id="disasterrelief", class="page">
     <div class="content">
         <h3>Find a Disaster Relief Center</h3>
         <a href= "https://www.google.com/maps/d/u/0/embed?mid=15hT0AX0spcrFHh63GHvI7R6HDLS0mOOa">Click on this link to find disaster relief centers throughout the U.S.</a>
@@ -381,7 +386,7 @@ h3{
     <div class="column">
       <div class="card">
         <h3>Tornadoes</h3>
-        <img src="https://www.amnh.org/var/ezflow_site/storage/images/media/tornado-leading-image/1666587-1-eng-US/tornado-leading-image.jpg" width="300" height = "300" class="w3-grayscale-max">
+        <img src="https://www.amnh.org/var/ezflow_site/storage/images/media/tornado-leading-image/1666587-1-eng-US/tornado-leading-image.jpg" width="300" height = "300" class="w3-grayscale-max" >
       </div>
     </div>
     
@@ -420,11 +425,11 @@ h3{
   <p>What to do if all possessions including home were destroyed during a natural disaster?</p>
   <div class="w3-panel w3-card-4" style="background-color: #e6ecff;">
   <h3>1. Make Other Arrangements for Mail Delivery If Your Home Was Destroyed</h3>
-  <p>Government agencies usually mail replacement vital documents to your home. If you lost your home, <a href=https://tools.usps.com/find-location.htm?>contact your local post office.</a>Ask if you can pick up your mail there or request to have your mail forwarded to a temporary location.</p>
+  <p>Government agencies usually mail replacement vital documents to your home. If you lost your home, <a href=https://tools.usps.com/find-location.htm?>contact your local post office. </a>Ask if you can pick up your mail there or request to have your mail forwarded to a temporary location.</p>
   </div>
   <div class="w3-panel w3-card-4" style="background-color: #ccd9ff;">
   <h3>2. Replace Your U.S. Birth Certificate</h3>
-  <p><a href=https://www.cdc.gov/nchs/w2w/index.htm>Find the vital records office</a>in the state where you were born. Check to see if you can get a certified copy of your birth certificate with no identification. If you can, follow the ordering instructions. Some states accept alternate ways to verify your ID. You may have to contact your state to find out what it requires. For example, a state may accept your sworn statement of identity or a notarized letter from your mother and father whose name is on your birth certificate, along with a copy of their photo id. </p>
+  <p><a href=https://www.cdc.gov/nchs/w2w/index.htm>Find the vital records office </a>in the state where you were born. Check to see if you can get a certified copy of your birth certificate with no identification. If you can, follow the ordering instructions. Some states accept alternate ways to verify your ID. You may have to contact your state to find out what it requires. For example, a state may accept your sworn statement of identity or a notarized letter from your mother and father whose name is on your birth certificate, along with a copy of their photo id. </p>
   </div>
   <div class="w3-panel w3-card-4" style="background-color: #b3c6ff;">
   <h3>3. Replace Your Drivers License</h3>
@@ -508,7 +513,7 @@ function showSlides(n) {
     textblurb.innerHTML = "A tornado is a violently rotating column of air extending from a thunderstorm to the ground. The most violent tornadoes are capable of tremendous destruction and could reach speeds of up to 300 mph. They have the potential to hurl vehicles hundreds of yards, destroy large buildings and houses, and uproot trees. Tornadoes have resulted in losses of over $14 billion on average for the United States, and have caused some of the worst destruction of all natural disasters.";
     break;
   case 3:
-    textblurb.innerHTML = "An earthquake is a sudden and violent shaking of the ground, sometimes causing great destruction, as a result of the shifting of the tectonic plates that make up the earth’s crust, or even volcanic action. Earthquakes have some of the highest death tolls, ranging in the hundreds of thousands per earthquake. For example, official estimates put the death toll at 316,000 people for the earthquake in Haiti which struck on January 12th, 2010. Earthquakes also cause major destruction for towns and cities as well, making it important to provide disaster relief for earthquake survivors as well.";
+    textblurb.innerHTML = "An earthquake is a sudden and violent shaking of the ground, sometimes causing great destruction, as a result of the shifting of the tectonic plates or even volcanic action. Earthquakes have some of the highest death tolls, ranging in the hundreds of thousands per earthquake. For example, official estimates put the death toll at 316,000 people for the earthquake in Haiti which struck on January 12th, 2010. Earthquakes also cause major destruction for towns and cities as well, making it important to provide disaster relief for earthquake survivors as well.";
     break;
   case 4:
     textblurb.innerHTML = "A tsunami is a series of unusually large waves in a water body that can be caused by a displacement of large volumes of water. Though tsunamis usually occur in oceans, they can even be caused by displacement of water in large lakes. Earthquakes, volcanic eruptions, and other underwater explosions can cause tsunamis. Tsunamis have proven to be twenty times more deadly than ground movements caused by earthquakes, as they have caused around 79 deaths per 1,000 people, while ground movements have caused 4 deaths per 1,000 people.";
